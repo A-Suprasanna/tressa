@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// import React from "react";
+// import { RouterProvider } from "react-router-dom";
+// import router from "./router/MainRouter";
+
+// function App() {
+//   return (
+//     <div>
+//       <RouterProvider router={router} />
+      
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+import React, { useState } from 'react';
+import { RouterProvider } from 'react-router-dom';  // Import RouterProvider
+import MainRouter from './router/MainRouter'; // Import MainRouter
 
 function App() {
+  const [user, setUser] = useState(null); // Store user info in state
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RouterProvider 
+      router={MainRouter(user, setUser)}  // Pass user and setUser to MainRouter
+    />
   );
 }
 

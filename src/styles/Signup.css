@@ -1,0 +1,123 @@
+/* Signup Form Styles */
+form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  form h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: #34495e;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  span {
+    display: block;
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    min-height: 1.2rem;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    form {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+    
+    form h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Enhanced Error States */
+  input.error {
+    border-color: #e74c3c;
+  }
+  
+  input.error:focus {
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+  }
+  
+  /* Password Requirements Hint */
+  .password-hint {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-top: 0.3rem;
+  }
+  
+  /* Success Message */
+  .success-message {
+    color: #27ae60;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+  
+  /* Additional Link */
+  .form-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+  }
+  
+  .form-footer a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .form-footer a:hover {
+    text-decoration: underline;
+  }

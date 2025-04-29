@@ -1,0 +1,122 @@
+/* General Page Styling */
+.cart-page {
+    padding: 1.5rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Heading Styling */
+  .cart-page h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  /* Cart Items Container */
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  /* Cart Item Styling */
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    height: 60%;
+    width: 5%;
+    border-radius: 8px;
+  }
+  
+  .cart-details {
+    flex: 1;
+    padding: 0 12px;
+  }
+  
+  .cart-details h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .cart-details p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  /* Remove Button */
+  .remove-btn {
+    background-color: #60065d;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Total Section Styling */
+  .total-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .total-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .checkout-btn {
+    padding: 8px 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Loading and Empty Cart Messages */
+  .cart-page {
+    text-align: center;
+  }
+  
+  .cart-page .cart-item:empty {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #777;
+  }
+  
