@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { collection, getDocs, addDoc, increment } from "firebase/firestore";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 import { db, auth } from "../helpers/firebase";
 import { useNavigate } from "react-router-dom";
 import "../styles/CategoryProducts.css";
