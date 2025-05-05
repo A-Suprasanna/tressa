@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../helpers/firebase'; // Assuming Firebase is set up
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import '../styles/SearchBar.css'; // Add your CSS styles
+import '../styles/SearchableProductList.css'; // Import your CSS file for styling
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');

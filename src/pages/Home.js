@@ -8,7 +8,7 @@ function Home() {
     <main className="main-content">
       <section className="left-section">
         <p className="subtitle">Transform and Redefine Your Wardrobe</p>
-        <h1 className="title">Find Your Signature Dress</h1>
+        <h1 className="title">Elevate Your Wardrobe</h1>
         <p className="description">
           Embrace the harmony of style and elegance. Explore our latest designs and
           discover the outfit that becomes your statement of confidence.

@@ -5,6 +5,8 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../helpers/firebase";
 import logo from "../assets/logo.jpg";
 
+import "../styles/Header.css"; // Adjust the path as necessary
+
 function Header() {
   const [user, setUser] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
@@ -79,7 +81,8 @@ function Header() {
   };
 
   return (
-    <header className="navbar">
+    <div>
+      <header className="navbar">
       {user && (
         <div >
           <div  style={{ display: "flex", alignItems: "center",gap: "10px" }}>
@@ -110,26 +113,7 @@ function Header() {
           value={searchTerm}
           onChange={handleSearch}
         />
-        {searchTerm && (
-          <div className="search-results">
-            {searchResults.length > 0 ? (
-              searchResults.map((product, index) => (
-                <div
-                  key={index}
-                  className="search-item"
-                  onClick={() => handleSelectProduct(product)}
-                >
-                  <div className="product-info">
-                    <div className="product-name">{product.name}</div>
-                    <div className="product-category">{product.category}</div>
-                  </div>
-                </div>
-              ))
-            ) : (
-              <div className="no-results">No matching products found.</div>
-            )}
-          </div>
-        )}
+
       </div>
 
       <nav className="nav-links">
@@ -145,7 +129,28 @@ function Header() {
         )}
       </nav>
     </header>
+    
+    {searchTerm && (
+      <div className="search-results">
+        {searchResults.length > 0 ? (
+          searchResults.map((product, index) => (
+            <div
+              key={index}
+              className="search-item"
+              onClick={() => handleSelectProduct(product)}
+            >
+              <div className="product-info">
+                <div className="product-name">{product.name}</div>
+                <div className="product-category">{product.category}</div>
+              </div>
+            </div>
+          ))
+        ) : (
+          <div className="no-results">No matching products found.</div>
+        )}
+      </div>
+    )}
+    </div>
   );
 }
-
 export default Header;

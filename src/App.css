@@ -29,10 +29,10 @@ body, html {
 .logo {
   height: 45px;
 }
-.Login{
+/* .Login{
   position: absolute;
   left: 90px;
-}
+} */
 .search-bar {
   width: 480px;
   padding: 10px 20px;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { collection, getDocs, addDoc } from "firebase/firestore";
-import { db, auth } from "../helpers/firebase"; // Make sure auth and db are correctly imported
+import { collection, getDocs, addDoc, increment } from "firebase/firestore";
+import { db, auth } from "../helpers/firebase";
 import { useNavigate } from "react-router-dom";
 import "../styles/CategoryProducts.css";
 
@@ -37,10 +37,14 @@ const WinterCollectionPage = () => {
     fetchProducts();
   }, []);
 
-  const handleQuantityChange = (id, delta) => {
+  const handleQuantityChange = (e,id) => {
+    const {name} = e.target;
+    const delta = {
+      increment:1, decrement:-1
+    }
     setQuantities((prev) => ({
       ...prev,
-      [id]: Math.max(1, prev[id] + delta),
+      [id]: Math.max(1, prev[id] + delta[name]),
     }));
   };
 
@@ -95,11 +99,17 @@ const WinterCollectionPage = () => {
             <p className="description">{product.description}</p>
             <p className="price">₹{product.price}</p>
             <div className="quantity-controls">
-              <button onClick={() => handleQuantityChange(product.id, -1)}>
+              <button
+                name="decrement"
+                onClick={(e)=>handleQuantityChange(e,product.id)}
+              >
                 -
               </button>
               <span>{quantities[product.id]}</span>
-              <button onClick={() => handleQuantityChange(product.id, 1)}>
+              <button
+                name="increment"
+                onClick={(e)=>handleQuantityChange(e,product.id)}
+              >
                 +
               </button>
             </div>
